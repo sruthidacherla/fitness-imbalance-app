@@ -1,4 +1,5 @@
 import streamlit as sl
+from modules.login import register_users, check_user
 
 ##App Name
 sl.title('Fitness Imbalance Tracker') 
@@ -17,7 +18,7 @@ if choice == 'Login':
 
     if sl.button('Login'):
         #Example Check
-        if username == 'sruthi' and password == 'password123':
+        if check_user(username, password):
             sl.success(f"Welcome, {username}!")
         else:
             sl.error("Invalid Login. Please check username and/or password.")
@@ -37,8 +38,11 @@ if choice == "Register":
         elif new_username == "":
             sl.error("Please choose a username.")
         else:
-            sl.success("Thank you for creating an account!")
-            sl.info("Proceed to the Login Page to sign in.")
+            if register_users(new_username, new_password):
+                sl.success("Thank you for creating an account!")
+                sl.info("Proceed to the Login Page to sign in.")
+            else:
+                sl.error("Username is taken.")
 
 
 
