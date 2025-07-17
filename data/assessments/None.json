@@ -1,0 +1,21 @@
+[
+    {
+        "timestamp": "2025-07-17 17:01:36",
+        "group": "Shoulders",
+        "muscle": "Rotator Cuff",
+        "results": {
+            "Empty Can Test": {
+                "left": 0,
+                "right": 1
+            },
+            "External Rotation Test": {
+                "left": 0,
+                "right": 0
+            },
+            "Drop Arm Test": {
+                "left": 0,
+                "right": 0
+            }
+        }
+    }
+]
