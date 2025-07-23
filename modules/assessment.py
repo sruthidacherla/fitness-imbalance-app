@@ -1,12 +1,13 @@
 import streamlit as sl
 
-def run_assessment(choice):
-    if choice == 'Assessment':
-        if sl.session_state.login_success == True:
+def run_assessment(page):
+    if page == 'Assessment':
+        if not sl.session_state.get("login_success", False):
+            sl.error("Login to start your assessment.")
+    
+        elif sl.session_state.login_success == True:
 
             sl.header("Self Assessment")
-
-            assessment_completed = False
 
             muscle_groups = {
                 "Shoulders": ["Rotator Cuff", "Deltoids"],
@@ -72,9 +73,3 @@ def run_assessment(choice):
                             elif right == 1 and left == 0:
                                 sl.error(f"Muscle Imbalance Detected in Right Rotator Cuff during {test}")
 
-                        ##go to rotator cuff exercises
-                        sl.button('Rotator Cuff Exercises')
-                        
-
-    elif sl.session_state.login_success != True and choice == 'Assessment':
-        sl.error('Please login to start the Assessment!')

@@ -1,12 +1,14 @@
 import streamlit as sl
 from modules.login import register_users, check_user
 from modules.assessment import run_assessment
+from modules.exercises import run_shoulder
+#run_arms, run_back, run_chest, run_hips, run_legs
 
 if "login_success" not in sl.session_state:
     sl.session_state.login_success = False
 
-##Options
-menu = ['Login', 'Register', 'Assessment']
+#Menu Sidebar
+menu = ['Home', 'Login', 'Register', 'Assessment', 'Shoulder', 'Arms', 'Back', 'Chest', 'Hips', 'Legs']
 choice = sl.sidebar.selectbox('Menu', menu)
 
 #Login Option
@@ -56,3 +58,10 @@ elif choice == "Register":
 #Assessment Option
 elif choice == 'Assessment': 
     run_assessment(choice)
+
+##Exercises
+
+#Shoulder 
+elif choice == 'Shoulder':
+    run_shoulder()
+
