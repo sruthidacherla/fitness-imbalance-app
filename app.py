@@ -2,6 +2,7 @@ import streamlit as sl
 from modules.login import register_users, check_user
 from modules.assessment import run_assessment
 from modules.exercises import run_shoulder
+from modules.home import home
 #run_arms, run_back, run_chest, run_hips, run_legs
 
 if "login_success" not in sl.session_state:
@@ -11,10 +12,14 @@ if "login_success" not in sl.session_state:
 menu = ['Home', 'Login', 'Register', 'Assessment', 'Shoulder', 'Arms', 'Back', 'Chest', 'Hips', 'Legs']
 choice = sl.sidebar.selectbox('Menu', menu)
 
+#Home Option
+if choice == 'Home':
+    home()
+
 #Login Option
 if choice == 'Login':
     ##App Name
-    sl.title('Fitness Imbalance Tracker')   
+    sl.title('Muscle Imbalance Tracker')   
 
     sl.subheader = ('Login')
 
@@ -33,7 +38,7 @@ if choice == 'Login':
 #Register Option
 elif choice == "Register":
     ##App Name
-    sl.title('Fitness Imbalance Tracker') 
+    sl.title('Muscle Imbalance Tracker') 
 
     sl.subheader = ('Register')
 
