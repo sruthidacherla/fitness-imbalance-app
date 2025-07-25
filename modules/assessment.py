@@ -1,5 +1,5 @@
 import streamlit as sl
-from modules.assessment_groups.shoulders import run_rotator, run_deltoids
+from modules.assessment_groups.shoulder_assess import run_rotator, run_deltoids
 
 def run_assessment(page):
     if page == 'Assessment':
