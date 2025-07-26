@@ -1,6 +1,7 @@
 import streamlit as sl
 from modules.assessment_groups.shoulder_assess import run_rotator, run_deltoids
 from modules.assessment_groups.arm_assess import run_triceps, run_biceps
+from modules.assessment_groups.back_assess import run_lowerback, run_upperback
 
 def run_assessment(page):
     if page == 'Assessment':
@@ -43,3 +44,10 @@ def run_assessment(page):
                 
                 if muscle_selected == 'Biceps':
                     run_biceps()
+                
+            if group_selected == 'Back':
+                if muscle_selected == 'Lower Back':
+                    run_lowerback()
+                
+                if muscle_selected == 'Upper Back':
+                    run_upperback()
