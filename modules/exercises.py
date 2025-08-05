@@ -4,6 +4,8 @@ from modules.exercise_groups.arm_exercises import tricep_exercises, bicep_exerci
 from modules.exercise_groups.back_exercises import lowerback_exercises, upperback_exercises
 from modules.exercise_groups.chest_exercises import pecs_exercises
 from modules.exercise_groups.hips_exercises import glutes_exercises, flexor_exercises
+from modules.exercise_groups.leg_exercises import quad_exercises, hamstring_exercises, calf_exercises
+
 ##Shoulder
 def run_shoulder(): 
     sl.title('Shoulder Exercises')
@@ -45,19 +47,15 @@ def run_hips():
     #Hip Flexors
     flexor_exercises()
 
-'''
 def run_legs():
-    sl.title('Arm Exercises')
-    #Triceps
-    sl.header('Triceps')
-    ##About Rotator Cuff
-    sl.text_area('Tricep....')
-    ##Muscle Imbalance in Rotator Cuff
-    ##Exercises for Rotator Cuff
+    sl.title('Leg Exercises')
+    
     #Quads
+    quad_exercises()
 
     #Hamstrings
+    hamstring_exercises()
 
     #Calves
+    calf_exercises()
 
- '''
