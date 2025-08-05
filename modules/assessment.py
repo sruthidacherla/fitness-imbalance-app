@@ -4,6 +4,7 @@ from modules.assessment_groups.arm_assess import run_triceps, run_biceps
 from modules.assessment_groups.back_assess import run_lowerback, run_upperback
 from modules.assessment_groups.chest_assess import run_pecs
 from modules.assessment_groups.hips_assess import run_glutes, run_flexors
+from modules.assessment_groups.leg_assess import run_quads, run_hamstrings, run_calves
 
 def run_assessment(page):
     if page == 'Assessment':
@@ -64,3 +65,13 @@ def run_assessment(page):
                 
                 if muscle_selected == 'Hip Flexors':
                     run_flexors()
+            
+            if group_selected == 'Legs':
+                if muscle_selected == 'Quads':
+                    run_quads()
+                
+                if muscle_selected == 'Hamstrings':
+                    run_hamstrings()
+                
+                if muscle_selected == 'Calves':
+                    run_calves()
