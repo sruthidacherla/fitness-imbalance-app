@@ -2,6 +2,7 @@ import streamlit as sl
 from modules.assessment_groups.shoulder_assess import run_rotator, run_deltoids
 from modules.assessment_groups.arm_assess import run_triceps, run_biceps
 from modules.assessment_groups.back_assess import run_lowerback, run_upperback
+from modules.assessment_groups.chest_assess import run_pecs
 
 def run_assessment(page):
     if page == 'Assessment':
@@ -51,3 +52,7 @@ def run_assessment(page):
                 
                 if muscle_selected == 'Upper Back':
                     run_upperback()
+            
+            if group_selected == 'Chest':
+                if muscle_selected == 'Pecs':
+                    run_pecs()
