@@ -3,6 +3,7 @@ from modules.assessment_groups.shoulder_assess import run_rotator, run_deltoids
 from modules.assessment_groups.arm_assess import run_triceps, run_biceps
 from modules.assessment_groups.back_assess import run_lowerback, run_upperback
 from modules.assessment_groups.chest_assess import run_pecs
+from modules.assessment_groups.hips_assess import run_glutes, run_flexors
 
 def run_assessment(page):
     if page == 'Assessment':
@@ -56,3 +57,10 @@ def run_assessment(page):
             if group_selected == 'Chest':
                 if muscle_selected == 'Pecs':
                     run_pecs()
+            
+            if group_selected == 'Hips':
+                if muscle_selected == 'Glutes':
+                    run_glutes()
+                
+                if muscle_selected == 'Hip Flexors':
+                    run_flexors()
