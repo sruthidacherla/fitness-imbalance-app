@@ -1,4 +1,4 @@
-# fitness-imbalance-app
+# Fitness Imbalance App
 
 An interactive **Streamlit web application** that helps users identify and address muscle imbalances through guided self-assessments and targeted exercise recommendations.
 
