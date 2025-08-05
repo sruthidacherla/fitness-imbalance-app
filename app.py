@@ -1,8 +1,8 @@
 import streamlit as sl
 from modules.login import register_users, check_user
 from modules.assessment import run_assessment
-from modules.exercises import run_shoulder, run_arms, run_back
-#run_chest, run_hips, run_legs
+from modules.exercises import run_shoulder, run_arms, run_back, run_chest
+# run_hips, run_legs
 from modules.home import home
 
 if "login_success" not in sl.session_state:
@@ -78,4 +78,7 @@ elif choice == 'Arms':
 elif choice == 'Back':
     run_back()
 
+#Chest
+elif choice == 'Chest':
+    run_chest()
 

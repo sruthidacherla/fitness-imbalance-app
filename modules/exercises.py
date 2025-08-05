@@ -2,6 +2,7 @@ import streamlit as sl
 from modules.exercise_groups.shoulder_exercises import rotator_exercises, deltoid_exercises
 from modules.exercise_groups.arm_exercises import tricep_exercises, bicep_exercises
 from modules.exercise_groups.back_exercises import lowerback_exercises, upperback_exercises
+from modules.exercise_groups.chest_exercises import pecs_exercises
 ##Shoulder
 def run_shoulder(): 
     sl.title('Shoulder Exercises')
@@ -29,18 +30,13 @@ def run_back():
 
     #Upper Back
     upperback_exercises()
-    
-'''
-def run_chest():
-    sl.title('Arm Exercises')
-    #Triceps
-    sl.header('Triceps')
-    ##About Rotator Cuff
-    sl.text_area('Tricep....')
-    ##Muscle Imbalance in Rotator Cuff
-    ##Exercises for Rotator Cuff
-    #Pecs
 
+def run_chest():
+    sl.title('Chest Exercises')
+    #Pecs
+    pecs_exercises()
+
+'''
 def run_hips():
     sl.title('Arm Exercises')
     #Triceps
